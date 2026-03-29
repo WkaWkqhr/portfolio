@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>wfix — 개인 셀프호스팅 서버</title>
+  <meta name="description" content="wfix는 오픈소스 프로젝트를 셀프호스팅하여 지인들과 함께 사용하는 개인 운영 서버입니다." />
+  <script type="text/javascript" nonce="5d174b88dc284065871e0074c5f" src="//injections.adguard.org?ts=1774780987851&amp;type=content-script&amp;dmn=ppl-ai-code-interpreter-files.s3.amazonaws.com&amp;url=https%3A%2F%2Fppl-ai-code-interpreter-files.s3.amazonaws.com%2Fweb%2Fdirect-files%2Fbd1d50b42f24da9c58232fa805ab0a28%2F05cc4bdd-df37-4b80-a79f-0c425afeee13%2F0eb54730.html%3Fresponse-content-disposition%3Dattachment%253B%2520filename%253D%2522index.html%2522%253B%2520filename%252A%253DUTF-8%2527%2527index.html%26AWSAccessKeyId%3DASIA2F3EMEYEQ6PZPQUQ%26Signature%3DburHfbFgFbw%252BllNO4OBpEdmlTNQ%253D%26x-amz-security-token%3DIQoJb3JpZ2luX2VjEEMaCXVzLWVhc3QtMSJHMEUCIQCiNFL6p0H47MXkEwStWe6GhNMCnTm3L1u8uq8UT5%252BZTAIgTqNmxaneBKE%252F664RSWDhUwjsCDQictTiWbMIKO63I28q8wQICxABGgw2OTk3NTMzMDk3MDUiDF4AKX%252F9N6UnTRLatirQBEqCPf5m%252FT3zzmpml7GpENczoEoFxaCDTIWp1M1FsOkSMasTYRL6To7a%252FeTCNKMif0rN6wjaXoQrdTdnxPdCqgD9rv88L6aC4dgv7wzT%252BamD6sy5bUHwxEa9SaaixvcRwkIxRpiRmAeKp0h4TvB%252BU8EJ3BzJdynBNIcjgpHCELf%252BDYlfNxgIquV0NlPtK18EkSdJOe%252FfXU%252FEk2xEuVjfbV1e8gEV5jaO%252BONrOgJEXwYLYmlkdEBNfPSt6rVFLC5ocA6kvV2Mo3vRTOM8ot4DroWCKX0iOlpAJfLVJk07Vk8ZSA7wnHCJ1Ao14lbyZoBnuvQHe87yaVASBmPsS9INMFFMV0zHBmbg5RsML1sfs%252FioH%252F%252B6ES6%252BdhWcFiY%252BfqQkPh2LRJaM9Vbpvnr2V2jUfUvcflMaKc%252BoiF6ShkymQvbankyzTdHoxmeb3XqXQMyejGhOefKDuqFvXMPMFqNg0Oz%252BFxlvcibTSHvQHsyEKWN%252B35hwqUPc3znzsyJNatP6HhoYAN0oIJFSZCO9tj5XryVwH0poGh%252BYQdVyeJNmerggsyuSp%252B7YLDFnCxlKQ2BshZCV0m71lxoDlKmDkU6Ela3IFaAgCyGE5OMYe3WMsLmm44rGRbeSeuRTbQB6gSvGGH%252BfaraK0yorJVxp5A6dt1RAirhu%252BCnJBvyq%252Fl9i02Y%252BFf4csEdqXnmrsGtIaNUG3QhXOlSP9eIYCO8qtNedrXKpiGxoiDfPmQT5cU4oYiPdnUm8BzEWqCJVzHrsEIjtNF7u7JGY5a2lTMmrqnP9J0EwtPijzgY6mAHRKeYyxuFdMEhq%252BWlGlSgxj6rTZqUtGQLAeJRIx1zWhAbPMsoYYj6o%252BoFlTRI6L2OQQJQVk5HzRe3ZsZIxMCvgpn0RMq6QcAzXxXUgfQAWVlY0A%252FT8AeSN96Ov6pA2l9gg%252FQQwPi1AG4BxiPdtbgVTfMPhzlj3gewGQ%252FVDa%252FPaFlropNPH7cN%252FSWCz0VqkjD2SxK2f2aUmMg%253D%253D%26Expires%3D1774782151&amp;app=chrome.exe&amp;css=3&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=0&amp;stealth=1&amp;st-push&amp;st-dnt"></script><script type="text/javascript" nonce="5d174b88dc284065871e0074c5f" src="//injections.adguard.org?ts=1774780987851&amp;name=New%20userscript&amp;type=user-script"></script><link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@300..700&display=swap" rel="stylesheet" />
+  <style>
+    /* ── Design Tokens ── */
+    :root, [data-theme="light"] {
+      --font-display: 'Instrument Serif', Georgia, serif;
+      --font-body: 'Plus Jakarta Sans', 'Helvetica Neue', sans-serif;
+
+      --text-xs:   clamp(0.75rem,  0.7rem  + 0.25vw, 0.875rem);
+      --text-sm:   clamp(0.875rem, 0.8rem  + 0.35vw, 1rem);
+      --text-base: clamp(1rem,     0.95rem + 0.25vw, 1.125rem);
+      --text-lg:   clamp(1.125rem, 1rem    + 0.75vw, 1.5rem);
+      --text-xl:   clamp(1.5rem,   1.2rem  + 1.25vw, 2.25rem);
+      --text-2xl:  clamp(2rem,     1.2rem  + 2.5vw,  3.5rem);
+
+      --space-1:  0.25rem; --space-2:  0.5rem;  --space-3:  0.75rem;
+      --space-4:  1rem;    --space-5:  1.25rem; --space-6:  1.5rem;
+      --space-8:  2rem;    --space-10: 2.5rem;  --space-12: 3rem;
+      --space-16: 4rem;    --space-20: 5rem;    --space-24: 6rem;
+
+      --color-bg:              #f7f6f2;
+      --color-surface:         #f9f8f5;
+      --color-surface-2:       #fbfbf9;
+      --color-surface-offset:  #f0ede8;
+      --color-divider:         #dcd9d5;
+      --color-border:          #d4d1ca;
+      --color-text:            #28251d;
+      --color-text-muted:      #6b6a65;
+      --color-text-faint:      #bab9b4;
+      --color-primary:         #01696f;
+      --color-primary-hover:   #0c4e54;
+      --color-primary-highlight: #cedcd8;
+
+      --radius-sm: 0.375rem; --radius-md: 0.5rem;
+      --radius-lg: 0.75rem;  --radius-xl: 1rem;
+      --radius-full: 9999px;
+
+      --shadow-sm: 0 1px 2px oklch(0.2 0.01 80 / 0.06);
+      --shadow-md: 0 4px 12px oklch(0.2 0.01 80 / 0.08);
+
+      --transition: 180ms cubic-bezier(0.16, 1, 0.3, 1);
+      --content-default: 900px;
+      --content-narrow: 640px;
+    }
+
+    [data-theme="dark"] {
+      --color-bg:              #171614;
+      --color-surface:         #1c1b19;
+      --color-surface-2:       #201f1d;
+      --color-surface-offset:  #252422;
+      --color-divider:         #262523;
+      --color-border:          #393836;
+      --color-text:            #cdccca;
+      --color-text-muted:      #797876;
+      --color-text-faint:      #5a5957;
+      --color-primary:         #4f98a3;
+      --color-primary-hover:   #227f8b;
+      --color-primary-highlight: #313b3b;
+      --shadow-sm: 0 1px 2px oklch(0 0 0 / 0.2);
+      --shadow-md: 0 4px 12px oklch(0 0 0 / 0.3);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme]) {
+        --color-bg: #171614; --color-surface: #1c1b19; --color-surface-2: #201f1d;
+        --color-surface-offset: #252422; --color-divider: #262523; --color-border: #393836;
+        --color-text: #cdccca; --color-text-muted: #797876; --color-text-faint: #5a5957;
+        --color-primary: #4f98a3; --color-primary-hover: #227f8b;
+        --color-primary-highlight: #313b3b;
+        --shadow-sm: 0 1px 2px oklch(0 0 0 / 0.2);
+        --shadow-md: 0 4px 12px oklch(0 0 0 / 0.3);
+      }
+    }
+
+    /* ── Base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html {
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      scroll-behavior: smooth;
+      scroll-padding-top: var(--space-16);
+    }
+    body {
+      min-height: 100dvh;
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      line-height: 1.6;
+      color: var(--color-text);
+      background: var(--color-bg);
+      transition: background var(--transition), color var(--transition);
+    }
+    img, svg { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    button { cursor: pointer; background: none; border: none; font: inherit; color: inherit; }
+    h1, h2, h3, h4 { text-wrap: balance; line-height: 1.2; }
+    p, li { text-wrap: pretty; }
+
+    a, button { transition: color var(--transition), background var(--transition), border-color var(--transition), opacity var(--transition); }
+
+    :focus-visible { outline: 2px solid var(--color-primary); outline-offset: 3px; border-radius: var(--radius-sm); }
+
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border-width: 0; }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+    }
+
+    /* ── Layout ── */
+    .container {
+      max-width: var(--content-default);
+      margin-inline: auto;
+      padding-inline: var(--space-6);
+    }
+    .container--narrow {
+      max-width: var(--content-narrow);
+      margin-inline: auto;
+      padding-inline: var(--space-6);
+    }
+
+    /* ── Header ── */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: color-mix(in oklch, var(--color-bg) 92%, transparent);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid oklch(from var(--color-text) l c h / 0.07);
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 3.5rem;
+      gap: var(--space-4);
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      font-weight: 600;
+      font-size: var(--text-sm);
+      letter-spacing: -0.01em;
+      color: var(--color-text);
+    }
+    .logo:hover { color: var(--color-primary); }
+    .logo svg { flex-shrink: 0; }
+
+    .header-actions { display: flex; align-items: center; gap: var(--space-3); }
+
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      padding: var(--space-2) var(--space-3);
+      border-radius: var(--radius-md);
+      font-size: var(--text-sm);
+      font-weight: 500;
+      color: var(--color-text-muted);
+      transition: color var(--transition), background var(--transition);
+    }
+    .btn-ghost:hover { color: var(--color-text); background: var(--color-surface-offset); }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      padding: var(--space-2) var(--space-5);
+      background: var(--color-primary);
+      color: #f9f8f4;
+      border-radius: var(--radius-md);
+      font-size: var(--text-sm);
+      font-weight: 600;
+      letter-spacing: 0.01em;
+    }
+    .btn-primary:hover { background: var(--color-primary-hover); }
+
+    .theme-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.25rem;
+      height: 2.25rem;
+      border-radius: var(--radius-full);
+      color: var(--color-text-muted);
+    }
+    .theme-btn:hover { color: var(--color-text); background: var(--color-surface-offset); }
+
+    /* ── Hero ── */
+    .hero {
+      padding-block: clamp(var(--space-16), 10vw, var(--space-24));
+      text-align: center;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      padding: var(--space-1) var(--space-3);
+      background: var(--color-primary-highlight);
+      color: var(--color-primary);
+      border-radius: var(--radius-full);
+      font-size: var(--text-xs);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: var(--space-6);
+    }
+    [data-theme="dark"] .hero-badge { background: var(--color-primary-highlight); }
+    .hero-badge-dot {
+      width: 6px; height: 6px;
+      background: var(--color-primary);
+      border-radius: var(--radius-full);
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50%  { opacity: 0.5; transform: scale(0.8); }
+    }
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: var(--text-2xl);
+      font-weight: 400;
+      color: var(--color-text);
+      letter-spacing: -0.02em;
+      margin-bottom: var(--space-5);
+    }
+    .hero-title em {
+      font-style: italic;
+      color: var(--color-primary);
+    }
+    .hero-desc {
+      font-size: var(--text-base);
+      color: var(--color-text-muted);
+      max-width: 52ch;
+      margin-inline: auto;
+      margin-bottom: var(--space-10);
+      line-height: 1.7;
+    }
+    .hero-cta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-3);
+      flex-wrap: wrap;
+    }
+    .btn-primary-lg {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      padding: var(--space-3) var(--space-8);
+      background: var(--color-primary);
+      color: #f9f8f4;
+      border-radius: var(--radius-lg);
+      font-size: var(--text-base);
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      box-shadow: var(--shadow-md);
+    }
+    .btn-primary-lg:hover { background: var(--color-primary-hover); box-shadow: var(--shadow-md); }
+
+    .btn-outline-lg {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      padding: var(--space-3) var(--space-8);
+      border: 1px solid oklch(from var(--color-text) l c h / 0.15);
+      border-radius: var(--radius-lg);
+      font-size: var(--text-base);
+      font-weight: 500;
+      color: var(--color-text-muted);
+    }
+    .btn-outline-lg:hover { color: var(--color-text); border-color: oklch(from var(--color-text) l c h / 0.3); background: var(--color-surface-offset); }
+
+    /* ── Divider ── */
+    .section-divider {
+      border: none;
+      border-top: 1px solid var(--color-divider);
+      margin: 0;
+    }
+
+    /* ── About Section ── */
+    .about-section {
+      padding-block: clamp(var(--space-12), 8vw, var(--space-20));
+    }
+    .section-label {
+      font-size: var(--text-xs);
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-primary);
+      margin-bottom: var(--space-4);
+    }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: var(--text-xl);
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      color: var(--color-text);
+      margin-bottom: var(--space-6);
+    }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-12);
+      align-items: start;
+    }
+    .about-body {
+      font-size: var(--text-base);
+      color: var(--color-text-muted);
+      line-height: 1.75;
+    }
+    .about-body p + p { margin-top: var(--space-4); }
+
+    /* ── Feature Cards ── */
+    .features-section {
+      padding-block: clamp(var(--space-12), 8vw, var(--space-20));
+      background: var(--color-surface);
+    }
+    .features-header {
+      text-align: center;
+      margin-bottom: var(--space-12);
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-4);
+    }
+    .feature-card {
+      padding: var(--space-6);
+      background: var(--color-bg);
+      border: 1px solid oklch(from var(--color-text) l c h / 0.08);
+      border-radius: var(--radius-xl);
+      transition: box-shadow var(--transition), transform var(--transition);
+    }
+    .feature-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+    .feature-icon {
+      width: 2.5rem;
+      height: 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-primary);
+      margin-bottom: var(--space-4);
+    }
+    .feature-title {
+      font-size: var(--text-base);
+      font-weight: 600;
+      color: var(--color-text);
+      margin-bottom: var(--space-2);
+    }
+    .feature-desc {
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+      line-height: 1.65;
+    }
+
+    /* ── Access Section ── */
+    .access-section {
+      padding-block: clamp(var(--space-12), 8vw, var(--space-20));
+    }
+    .access-box {
+      background: var(--color-surface);
+      border: 1px solid oklch(from var(--color-text) l c h / 0.08);
+      border-radius: var(--radius-xl);
+      padding: clamp(var(--space-8), 4vw, var(--space-12));
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-12);
+      align-items: center;
+    }
+    .access-steps { display: flex; flex-direction: column; gap: var(--space-5); }
+    .access-step { display: flex; gap: var(--space-4); align-items: flex-start; }
+    .step-num {
+      flex-shrink: 0;
+      width: 1.75rem;
+      height: 1.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--color-primary-highlight);
+      color: var(--color-primary);
+      border-radius: var(--radius-full);
+      font-size: var(--text-xs);
+      font-weight: 700;
+    }
+    .step-content {}
+    .step-title { font-size: var(--text-sm); font-weight: 600; color: var(--color-text); margin-bottom: var(--space-1); }
+    .step-desc { font-size: var(--text-sm); color: var(--color-text-muted); line-height: 1.6; }
+
+    .access-login {}
+    .access-login-title {
+      font-family: var(--font-display);
+      font-size: var(--text-lg);
+      font-weight: 400;
+      color: var(--color-text);
+      margin-bottom: var(--space-2);
+    }
+    .access-login-desc {
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+      margin-bottom: var(--space-6);
+      line-height: 1.65;
+    }
+    .login-btn-wrap { display: flex; flex-direction: column; gap: var(--space-3); }
+    .btn-login {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-3);
+      padding: var(--space-3) var(--space-5);
+      background: var(--color-primary);
+      color: #f9f8f4;
+      border-radius: var(--radius-lg);
+      font-size: var(--text-sm);
+      font-weight: 600;
+      width: 100%;
+      justify-content: center;
+    }
+    .btn-login:hover { background: var(--color-primary-hover); }
+    .login-note {
+      font-size: var(--text-xs);
+      color: var(--color-text-faint);
+      text-align: center;
+    }
+
+    /* ── Footer ── */
+    .site-footer {
+      border-top: 1px solid var(--color-divider);
+      padding-block: var(--space-8);
+    }
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-4);
+      flex-wrap: wrap;
+    }
+    .footer-left {
+      display: flex;
+      align-items: center;
+      gap: var(--space-4);
+    }
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      font-weight: 600;
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+    }
+    .footer-copy {
+      font-size: var(--text-xs);
+      color: var(--color-text-faint);
+    }
+    .footer-links { display: flex; align-items: center; gap: var(--space-5); }
+    .footer-link {
+      font-size: var(--text-xs);
+      color: var(--color-text-faint);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-color: transparent;
+    }
+    .footer-link:hover { color: var(--color-text-muted); text-decoration-color: var(--color-text-muted); }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      .about-grid { grid-template-columns: 1fr; gap: var(--space-6); }
+      .features-grid { grid-template-columns: 1fr; }
+      .access-box { grid-template-columns: 1fr; gap: var(--space-8); }
+      .footer-inner { flex-direction: column; align-items: flex-start; gap: var(--space-3); }
+      .footer-links { gap: var(--space-4); }
+      .hero-cta { flex-direction: column; align-items: center; }
+      .btn-primary-lg, .btn-outline-lg { width: 100%; justify-content: center; }
+    }
+    @media (max-width: 480px) {
+      .header-inner .btn-primary { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Header ── -->
+  <header class="site-header" role="banner">
+    <div class="container">
+      <div class="header-inner">
+        <a href="/" class="logo" aria-label="wfix 홈">
+          <!-- SVG Logo -->
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+            <rect width="28" height="28" rx="7" fill="currentColor" style="color: var(--color-primary)" />
+            <path d="M7 9L10.5 19L14 12L17.5 19L21 9" stroke="#f9f8f4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          wfix
+        </a>
+
+        <div class="header-actions">
+          <button class="theme-btn" data-theme-toggle aria-label="다크 모드로 전환">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+          </button>
+          <a href="https://auth.wfix.kr" class="btn-primary" target="_blank" rel="noopener noreferrer">로그인</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ── Hero ── -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container--narrow">
+        <div class="hero-badge">
+          <span class="hero-badge-dot" aria-hidden="true"></span>
+          개인 운영 서버
+        </div>
+        <h1 id="hero-heading" class="hero-title">
+          지인들과 함께 쓰는<br/>
+          <em>셀프호스팅 서버</em>
+        </h1>
+        <p class="hero-desc">
+          wfix는 다양한 오픈소스 프로젝트를 셀프호스팅하여 지인들과 함께 사용하기 위해 개인적으로 운영하는 서버입니다. 초대를 통해 접근 권한이 부여된 이용자만 이용할 수 있습니다.
+        </p>
+        <div class="hero-cta">
+          <a href="https://auth.wfix.kr" class="btn-primary-lg" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+            로그인
+          </a>
+          <a href="#about" class="btn-outline-lg">
+            서비스 소개 보기
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider" />
+
+    <!-- ── About ── -->
+    <section id="about" class="about-section" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="about-grid">
+          <div>
+            <p class="section-label">서비스 소개</p>
+            <h2 id="about-heading" class="section-title">wfix란 무엇인가요?</h2>
+          </div>
+          <div class="about-body">
+            <p>wfix는 개인이 취미 목적으로 운영하는 셀프호스팅 서버로, 오픈소스 소프트웨어를 직접 설치하고 관리하여 지인들과 공유하는 서비스입니다.</p>
+            <p>wfix.kr 메인 도메인을 중심으로 다양한 서브도메인 서비스(*.wfix.kr)를 운영하며, 각 서비스에 대한 접근 권한은 운영자가 개별적으로 부여합니다. 이용자마다 접근 가능한 서비스가 다를 수 있습니다.</p>
+            <p>상업적 목적 없이 순수하게 편의를 위해 운영되며, 서비스의 지속성이나 가용성을 보장하지 않습니다.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider" />
+
+    <!-- ── Features ── -->
+    <section class="features-section" aria-labelledby="features-heading">
+      <div class="container">
+        <div class="features-header">
+          <p class="section-label">특징</p>
+          <h2 id="features-heading" class="section-title">어떤 서비스인가요?</h2>
+        </div>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M20 7H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/><path d="M16 3v4M8 3v4M12 12h.01"/></svg>
+            </div>
+            <h3 class="feature-title">셀프호스팅 오픈소스</h3>
+            <p class="feature-desc">널리 사용되는 오픈소스 프로젝트를 직접 서버에 설치하여 운영합니다. 데이터는 외부 클라우드 서비스 없이 자체 서버에 보관됩니다.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3 class="feature-title">초대 전용 접근</h3>
+            <p class="feature-desc">운영자의 초대 및 승인을 통해서만 서비스에 접근할 수 있습니다. 이용자별로 접근 가능한 서비스 범위가 다르게 설정됩니다.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </div>
+            <h3 class="feature-title">간편한 계정 연동</h3>
+            <p class="feature-desc">wfix 자체 계정 또는 소셜 로그인(Google, Microsoft, GitHub 등)으로 간편하게 로그인할 수 있습니다. 별도 비밀번호 없이 기존 계정을 사용할 수 있습니다.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="section-divider" />
+
+    <!-- ── Access ── -->
+    <section class="access-section" aria-labelledby="access-heading">
+      <div class="container">
+        <div class="access-box">
+          <div>
+            <p class="section-label">이용 안내</p>
+            <h2 id="access-heading" class="section-title">어떻게 이용하나요?</h2>
+            <div class="access-steps">
+              <div class="access-step">
+                <div class="step-num" aria-hidden="true">1</div>
+                <div class="step-content">
+                  <div class="step-title">운영자에게 문의</div>
+                  <p class="step-desc">운영자(이지호, <a href="mailto:admin@wfix.kr" style="color: var(--color-primary);">admin@wfix.kr</a>)에게 연락하여 서비스 이용 의사를 전달합니다.</p>
+                </div>
+              </div>
+              <div class="access-step">
+                <div class="step-num" aria-hidden="true">2</div>
+                <div class="step-content">
+                  <div class="step-title">계정 생성 및 권한 부여</div>
+                  <p class="step-desc">운영자가 계정을 생성하고 이용 가능한 서비스에 대한 접근 권한을 부여합니다.</p>
+                </div>
+              </div>
+              <div class="access-step">
+                <div class="step-num" aria-hidden="true">3</div>
+                <div class="step-content">
+                  <div class="step-title">서비스 이용 시작</div>
+                  <p class="step-desc">각 서비스 최초 이용 시 개인정보 수집 항목을 확인하고 동의 후 이용을 시작합니다.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="access-login">
+            <h3 class="access-login-title">계정이 있으신가요?</h3>
+            <p class="access-login-desc">이미 접근 권한을 부여받은 경우 아래 버튼을 통해 로그인할 수 있습니다. wfix 계정 또는 소셜 로그인을 지원합니다.</p>
+            <div class="login-btn-wrap">
+              <a href="https://auth.wfix.kr" class="btn-login" target="_blank" rel="noopener noreferrer">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+                로그인하기
+              </a>
+              <p class="login-note">접근 권한이 없는 경우 운영자에게 문의하세요</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ── Footer ── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-left">
+          <div class="footer-logo">
+            <svg width="20" height="20" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+              <rect width="28" height="28" rx="7" fill="currentColor" style="color: var(--color-primary)" />
+              <path d="M7 9L10.5 19L14 12L17.5 19L21 9" stroke="#f9f8f4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            wfix
+          </div>
+          <span class="footer-copy">© 2026 wfix. 개인 운영 서버.</span>
+        </div>
+        <nav class="footer-links" aria-label="푸터 링크">
+          <a href="https://drive.wfix.kr/s/tMEwJa3WeGdjWpS?opendetails=" class="footer-link">개인정보처리방침</a>
+          <a href="mailto:admin@wfix.kr" class="footer-link">문의하기</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var html = document.documentElement;
+      var btn = document.querySelector('[data-theme-toggle]');
+      var dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      var theme = dark ? 'dark' : 'light';
+      html.setAttribute('data-theme', theme);
+
+      function updateIcon(t) {
+        if (!btn) return;
+        if (t === 'dark') {
+          btn.setAttribute('aria-label', '라이트 모드로 전환');
+          btn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>';
+        } else {
+          btn.setAttribute('aria-label', '다크 모드로 전환');
+          btn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+        }
+      }
+      updateIcon(theme);
+
+      if (btn) {
+        btn.addEventListener('click', function () {
+          theme = theme === 'dark' ? 'light' : 'dark';
+          html.setAttribute('data-theme', theme);
+          updateIcon(theme);
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
