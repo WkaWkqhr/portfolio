@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>wfix 개인정보 처리방침</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
+      background-color: #f5f6f8;
+      color: #1a1a2e;
+      line-height: 1.8;
+      padding: 40px 16px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 48px 56px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    }
+
+    /* Header */
+    .header {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 32px;
+      border-bottom: 2px solid #e8eaf0;
+    }
+    .header .badge {
+      display: inline-block;
+      background: #4f46e5;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+    }
+    .header h1 {
+      font-size: 26px;
+      font-weight: 700;
+      color: #1a1a2e;
+      margin-bottom: 8px;
+    }
+    .header .meta {
+      font-size: 13px;
+      color: #6b7280;
+    }
+    .header .meta span { margin: 0 6px; }
+
+    /* Intro */
+    .intro {
+      background: #f0f4ff;
+      border-left: 4px solid #4f46e5;
+      border-radius: 0 8px 8px 0;
+      padding: 16px 20px;
+      margin-bottom: 36px;
+      font-size: 14px;
+      color: #374151;
+    }
+
+    /* Article */
+    .article {
+      margin-bottom: 36px;
+    }
+    .article-title {
+      font-size: 17px;
+      font-weight: 700;
+      color: #4f46e5;
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #e8eaf0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .article-title .num {
+      background: #4f46e5;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    p { margin-bottom: 10px; font-size: 14px; color: #374151; }
+
+    .sub-title {
+      font-weight: 600;
+      color: #1a1a2e;
+      margin: 14px 0 6px;
+      font-size: 14px;
+    }
+
+    ol, ul {
+      padding-left: 20px;
+      margin-bottom: 10px;
+    }
+    ol li, ul li {
+      font-size: 14px;
+      color: #374151;
+      margin-bottom: 6px;
+    }
+
+    /* Table */
+    .table-wrap { overflow-x: auto; margin: 12px 0; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+    }
+    thead tr { background: #4f46e5; color: #fff; }
+    thead th {
+      padding: 10px 14px;
+      text-align: left;
+      font-weight: 600;
+    }
+    tbody tr:nth-child(even) { background: #f8f9ff; }
+    tbody td {
+      padding: 10px 14px;
+      border-bottom: 1px solid #e8eaf0;
+      color: #374151;
+      vertical-align: top;
+    }
+
+    /* Notice box */
+    .notice {
+      background: #fffbeb;
+      border: 1px solid #fcd34d;
+      border-radius: 8px;
+      padding: 14px 18px;
+      font-size: 13px;
+      color: #92400e;
+      margin: 12px 0;
+    }
+    .notice::before { content: "⚠️ "; }
+
+    .info-box {
+      background: #f0fdf4;
+      border: 1px solid #86efac;
+      border-radius: 8px;
+      padding: 14px 18px;
+      font-size: 13px;
+      color: #166534;
+      margin: 12px 0;
+    }
+    .info-box::before { content: "ℹ️ "; }
+
+    /* Contact card */
+    .contact-card {
+      background: #f8f9ff;
+      border: 1px solid #c7d2fe;
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin: 12px 0;
+    }
+    .contact-card .contact-row {
+      display: flex;
+      gap: 16px;
+      font-size: 14px;
+      padding: 6px 0;
+      border-bottom: 1px solid #e8eaf0;
+    }
+    .contact-card .contact-row:last-child { border-bottom: none; }
+    .contact-card .contact-label {
+      font-weight: 600;
+      color: #4f46e5;
+      min-width: 160px;
+      flex-shrink: 0;
+    }
+    .contact-card .contact-value { color: #374151; }
+    .contact-card a { color: #4f46e5; text-decoration: none; }
+    .contact-card a:hover { text-decoration: underline; }
+
+    /* Rights list */
+    .rights-list {
+      list-style: none;
+      padding: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin: 12px 0;
+    }
+    .rights-list li {
+      background: #f0f4ff;
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-size: 13.5px;
+      color: #374151;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .rights-list li::before {
+      content: "✓";
+      color: #4f46e5;
+      font-weight: 700;
+    }
+
+    /* Security measures */
+    .measures { list-style: none; padding: 0; margin: 12px 0; }
+    .measures li {
+      display: flex;
+      gap: 10px;
+      padding: 10px 14px;
+      background: #f8f9ff;
+      border-radius: 8px;
+      margin-bottom: 8px;
+      font-size: 14px;
+      color: #374151;
+    }
+    .measures .measure-icon {
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+    .measures strong { color: #1a1a2e; }
+
+    /* Footer */
+    .footer {
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 2px solid #e8eaf0;
+      text-align: center;
+      font-size: 13px;
+      color: #9ca3af;
+    }
+    .footer strong { color: #4f46e5; }
+  </style>
+<script type="text/javascript" nonce="5d174b88dc284065871e0074c5f" src="//injections.adguard.org?ts=1774788187613&amp;type=content-script&amp;dmn=ppl-ai-code-interpreter-files.s3.amazonaws.com&amp;url=https%3A%2F%2Fppl-ai-code-interpreter-files.s3.amazonaws.com%2Fweb%2Fdirect-files%2Fb2dcf031c2fe1139c17bc25ee9540470%2Fe8adc515-bd70-438d-a8c0-9adde89a71f2%2Fc8b1b7c6.html%3Fresponse-content-disposition%3Dattachment%253B%2520filename%253D%2522wfix_privacy_policy.html%2522%253B%2520filename%252A%253DUTF-8%2527%2527wfix_privacy_policy.html%26AWSAccessKeyId%3DASIA2F3EMEYE4TGZD77U%26Signature%3DpUo6Wvlj8hn45od5Qgb4Z9rrFek%253D%26x-amz-security-token%3DIQoJb3JpZ2luX2VjEEUaCXVzLWVhc3QtMSJHMEUCIQDERR3za6LNq3mzLxn2zXKWlc%252F4JOIWKS0bmeBzAWziBwIgDY2mN89EN6IWPPTTHbIXUvW9ilAON4uIhG9FYLZRK0Qq8wQIDhABGgw2OTk3NTMzMDk3MDUiDKOsOpOKcCsvthv2ESrQBK98wreurjXzx5uucYmQSSOTOCS2sa4Rv%252BPtYrI46UWm5HKvO4Q8Y0VpyMkWxFL4QxwWvJ0J%252BiKrPxwzwMa14jPdXf322acgKJnwIvo3Zg7YiDIjXPmYuJ6F3Ac97UXarFvVIgtxsWzAsguC9z9hD038LBETzQc5afL%252FqW5Ye5iRJpmk5GBhxiyfUVvkYadR2ECwiQCjeMAnCzgcunP71uZgUw%252BlxB78PMXD%252BH8g5nIjBordSoFRRoSKlGZPsQ6%252BuitqIjoI7pjoZ8UrKSpOn%252FDi0A6tDIIVd9nSbyDcu68HIS6zA809CpezTkX0i3TVJrHQ%252BQRpNdH3Msiea31odOgcDMIIJwhy6TJe60zoqOnb1ydJ24pjpi%252FwSnKb7AQpCoJbV3u0kO9%252BixPvcP%252FV%252BXQUQNhiERmyEey0C14ufKQjfQzgBgnCQQS24RFItiH2LsrnBdoq5n0U5z8hgz2fvGKEDtmi9G36m4SKYBEuzs6VSB6vEg6yASsOGIm9UzbXUu7m9c%252FiqETay5%252FXI2EhYLkaUGs9mQwkOQwVEvDRXqEVfOrQhoRUoA9DjO7zQkak%252FsyAI2pNsjf8QwSHoy3APdGrI9M8L8Pq7RN0h%252F%252BzSwvYlVUcg0qE10s0BmfL%252BNu5GgTrzvQ%252F4B0y1596jHzlYUS9%252FMao1Kc4RrXUATEtQQwyLkBSpQHMiULuOh12SZ0l6vwXIb2UHkUp4r4%252BsfZ3TTuvijTSEHobkuxXOnoePnguYRZ5ed%252B06x2owRCuytnTVdtyRFS3tk6dmESpclyXcF8wsrikzgY6mAGCqeb9JhhEbL8ow3txB781Grewh6HFATfLgLvG04%252Fm4I4Yn0vAjpO7oJh81icYh4LI8hmsy8GhoOq712kKskgjNKEb7mZ3mdHLN8NwKBhnmgtalaGfDDxuFyAyT7T4fpc39fsuDfSa%252Fg3fnLA17iZMr68junGLBY3R5vvUxh4QMGUff9M5Gc8Z2j%252BbW7hVHW6sYGCTgWk2QA%253D%253D%26Expires%3D1774789511&amp;app=chrome.exe&amp;css=3&amp;js=1&amp;rel=1&amp;rji=1&amp;sbe=0&amp;stealth=1&amp;st-push&amp;st-dnt"></script><script type="text/javascript" nonce="5d174b88dc284065871e0074c5f" src="//injections.adguard.org?ts=1774788187613&amp;name=New%20userscript&amp;type=user-script"></script></head>
+<body>
+<div class="container">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="badge">Privacy Policy</div>
+    <h1>개인정보 처리방침</h1>
+    <div class="meta">
+      <span>서비스: <strong>wfix</strong></span>·
+      <span>도메인: wfix.kr 및 *.wfix.kr</span>·
+      <span>시행일: 2026년 3월 29일</span>
+    </div>
+  </div>
+
+  <!-- Intro -->
+  <div class="intro">
+    wfix(이하 "서비스", 운영 도메인: wfix.kr 및 *.wfix.kr)는 정보주체의 자유와 권리 보호를 위해 「개인정보 보호법」 및 관계 법령이 정한 바를 준수하여 적법하게 개인정보를 처리하고 안전하게 관리하고 있습니다. 이에 「개인정보 보호법」 제30조에 따라 정보주체에게 개인정보 처리에 관한 절차 및 기준을 안내하고, 이와 관련한 고충을 신속하고 원활하게 처리할 수 있도록 하기 위하여 다음과 같이 개인정보 처리방침을 수립·공개합니다.
+  </div>
+
+  <!-- 제1조 -->
+  <div class="article">
+    <div class="article-title"><span class="num">1</span>제1조 개인정보의 처리 목적</div>
+    <p>wfix는 다음의 목적을 위하여 개인정보를 처리합니다. 처리하고 있는 개인정보는 다음의 목적 이외의 용도로는 이용되지 않으며, 이용 목적이 변경되는 경우에는 「개인정보 보호법」 제18조에 따라 별도의 동의를 받는 등 필요한 조치를 이행할 예정입니다.</p>
+    <p class="sub-title">1. 회원 가입 및 계정 관리</p>
+    <p>wfix 자체 계정 또는 소셜 로그인(외부 계정 연동)을 통한 로그인 처리, 이용자 식별·인증, 회원 자격 유지 및 관리, 서비스 부정이용 방지, 고충 처리를 목적으로 개인정보를 처리합니다.</p>
+    <p class="sub-title">2. 개별 서비스 제공</p>
+    <p>본 서비스는 wfix.kr을 중심으로 *.wfix.kr 형태의 다수 서브도메인 서비스를 운영합니다. 각 서비스는 해당 서비스 제공에 필요한 최소한의 개인정보를 수집·이용하며, 수집 항목은 서비스별로 상이합니다. 이용자는 각 서비스 이용 시작 전 수집 항목 및 처리 목적을 개별 고지받고 이에 동의한 경우에 한하여 해당 서비스를 이용할 수 있습니다.</p>
+  </div>
+
+  <!-- 제2조 -->
+  <div class="article">
+    <div class="article-title"><span class="num">2</span>제2조 개인정보의 처리 및 보유 기간</div>
+    <p>① wfix는 법령에 따른 개인정보 보유·이용기간 또는 정보주체로부터 개인정보 수집 시 동의받은 개인정보 보유·이용기간 내에서 개인정보를 처리·보유합니다.</p>
+    <p>② 각각의 개인정보 처리 및 보유 기간은 다음과 같습니다.</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>처리 목적</th><th>보유 기간</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>회원 가입 및 계정 관리</td><td>회원 탈퇴 후 삭제 요청 시까지</td></tr>
+          <tr><td>개별 서비스 이용에 따른 데이터</td><td>회원 탈퇴 후 삭제 요청 시까지</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="notice">
+      본 서비스는 개인이 취미 목적으로 운영하는 셀프호스팅 환경으로, 회원 탈퇴 시 각 개별 서비스(*.wfix.kr)의 데이터가 기술적 사유로 즉시 자동 삭제되지 않을 수 있습니다. 탈퇴 후 데이터 삭제를 원하시는 경우, 아래 개인정보 보호책임자에게 직접 삭제 요청해 주시기 바랍니다.
+    </div>
+  </div>
+
+  <!-- 제3조 -->
+  <div class="article">
+    <div class="article-title"><span class="num">3</span>제3조 처리하는 개인정보의 항목</div>
+    <p>wfix는 다음의 개인정보 항목을 처리합니다.</p>
+    <p class="sub-title">1. 공통 수집 항목 (계정 가입 시)</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>가입 방식</th><th>수집 항목</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>wfix 자체 계정</td>
+            <td>아이디, 이메일 주소, 이름(닉네임), 비밀번호(암호화 저장)</td>
+          </tr>
+          <tr>
+            <td>소셜 로그인 (외부 계정 연동)</td>
+            <td>이메일 주소, 이름, 프로필 사진 등 외부 서비스 제공 항목 (연동하는 외부 서비스의 제공 범위에 따라 상이)</td>
+          </tr>
+          <tr>
+            <td>공통 자동 수집 항목</td>
+            <td>서비스 이용 기록, 접속 로그, 접속 IP 주소</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="sub-title">2. 개별 서비스 추가 수집 항목</p>
+    <p>본 서비스의 일부 기능은 서비스 제공을 위해 위 공통 항목 외 추가적인 개인정보를 수집할 수 있습니다. 추가 수집 항목은 서비스마다 상이하며, 이용자는 해당 서비스를 최초로 이용하기 전 수집 항목 및 처리 목적을 확인하고 이에 동의하여야 서비스 이용이 가능합니다. 동의하지 않는 경우 해당 서비스 이용이 제한될 수 있습니다.</p>
+    <div class="info-box">
+      본 서비스는 초대 및 운영자 승인을 통해 이용자별로 접근 가능한 서비스가 다르게 구성됩니다. 이용자는 자신에게 접근 권한이 부여된 서비스에 한하여 해당 서비스의 개인정보 수집 항목을 고지받게 됩니다.
+    </div>
+  </div>
+
+  <!-- 제4조 -->
+  <div class="article">
+    <div class="article-title"><span class="num">4</span>제4조 개인정보의 제3자 제공</div>
+    <p>① wfix는 정보주체의 개인정보를 제1조에서 명시한 목적 범위 내에서만 처리하며, 정보주체의 동의, 법률의 특별한 규정 등 「개인정보 보호법」 제17조 및 제18조에 해당하는 경우에만 개인정보를 제3자에게 제공합니다.</p>
+    <p>② 현재 정보주체의 개인정보를 제3자에게 제공하고 있지 않습니다.</p>
+    <p>③ 다만, 재난·감염병·급박한 생명·신체 위험을 초래하는 사건·사고·급박한 재산 손실 등의 긴급상황이 발생하는 경우 정보주체의 동의 없이 관계기관에 개인정보를 제공할 수 있습니다.</p>
+    <div class="info-box">
+      <strong>소셜 로그인(외부 계정 연동) 관련 안내:</strong> 본 서비스는 소셜 로그인 이용 시 해당 외부 서비스 제공자(Google, Microsoft, GitHub 등)로부터 이용자의 일부 정보를 제공받습니다. 이는 외부 서비스가 wfix에 정보를 제공하는 것이며, wfix가 외부 서비스에 정보를 제공하는 것이 아닙니다. 각 외부 서비스의 개인정보 처리방침은 해당 서비스 제공자의 공식 홈페이지에서 확인하실 수 있습니다.
+    </div>
+  </div>
+
+  <!-- 제5조 -->
+  <div class="article">
+    <div class="article-title"><span class="num">5</span>제5조 개인정보의 파기 절차 및 방법</div>
+    <p>① wfix는 개인정보 보유기간의 경과, 처리 목적 달성 등 개인정보가 불필요하게 되었을 때에는 지체없이 해당 개인정보를 파기합니다.</p>
+    <p>② 개인정보 파기의 절차 및 방법은 다음과 같습니다.</p>
+    <p class="sub-title">파기 절차</p>
+    <p>파기 사유가 발생한 개인정보를 확인하고, 개인정보 보호책임자의 확인을 거쳐 파기합니다. 정보주체가 별도 삭제를 요청한 경우에는 요청 확인 후 지체없이 처리합니다.</p>
+    <p class="sub-title">파기 방법</p>
+    <p>전자적 파일 형태로 기록·저장된 개인정보는 기록을 재생할 수 없도록 영구 삭제합니다.</p>
+  </div>
+
+  <!-- 제6조 -->
+  <div class="article">
+    <div class="article-title"><span class="num">6</span>제6조 정보주체와 법정대리인의 권리·의무 및 행사방법</div>
+    <p>① 정보주체는 wfix에 대해 언제든지 다음 각 호의 개인정보 보호 관련 권리를 행사할 수 있습니다.</p>
+    <ul class="rights-list">
+      <li>개인정보 열람 요구</li>
+      <li>오류 등이 있을 경우 정정 요구</li>
+      <li>삭제 요구</li>
+      <li>처리 정지 요구</li>
+    </ul>
+    <p>② 위 권리 행사는 개인정보 보호책임자에게 이메일을 통하여 하실 수 있으며, wfix는 이에 대해 지체없이 조치합니다.</p>
+    <p>③ 정보주체가 개인정보의 오류 등에 대한 정정 또는 삭제를 요구한 경우에는 정정 또는 삭제를 완료할 때까지 해당 개인정보를 이용하거나 제공하지 않습니다.</p>
+  </div>
+
+  <!-- 제7조 -->
+  <div class="article">
+    <div class="article-title"><span class="num">7</span>제7조 개인정보의 안전성 확보조치</div>
+    <p>wfix는 개인정보의 안전성 확보를 위해 다음과 같은 조치를 취하고 있습니다.</p>
+    <ul class="measures">
+      <li>
+        <span class="measure-icon">🛡️</span>
+        <span><strong>관리적 조치:</strong> 개인정보에 대한 접근 권한을 운영자 최소 인원으로 제한하며, 이용자별 접근 가능 서비스를 별도로 관리합니다.</span>
+      </li>
+      <li>
+        <span class="measure-icon">🔒</span>
+        <span><strong>기술적 조치:</strong> HTTPS(TLS)를 통한 전송 구간 암호화, 비밀번호 암호화 저장, 서버 접근 통제 적용</span>
+      </li>
+      <li>
+        <span class="measure-icon">🏢</span>
+        <span><strong>물리적 조치:</strong> 개인정보가 저장된 서버에 대한 외부 접근 통제</span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- 제8조 -->
+  <div class="article">
+    <div class="article-title"><span class="num">8</span>제8조 자동 수집 장치의 설치·운영 및 거부에 관한 사항</div>
+    <p>① wfix는 서비스 운영에 필요한 최소한의 쿠키(Cookie) 및 세션 정보를 사용합니다. 쿠키는 이용자의 로그인 상태 유지 및 서비스 이용 편의 제공을 위해 사용됩니다.</p>
+    <p>② 이용자는 웹 브라우저 설정을 통해 쿠키 저장을 거부할 수 있으나, 이 경우 로그인 등 일부 서비스 이용에 어려움이 있을 수 있습니다.</p>
+  </div>
+
+  <!-- 제9조 -->
+  <div class="article">
+    <div class="article-title"><span class="num">9</span>제9조 개인정보 보호책임자</div>
+    <p>① wfix는 개인정보 처리에 관한 업무를 총괄하여 책임지고, 개인정보 처리와 관련한 정보주체의 불만처리 및 피해구제 등을 위하여 아래와 같이 개인정보 보호책임자를 지정하고 있습니다.</p>
+    <div class="contact-card">
+      <div class="contact-row">
+        <span class="contact-label">대표자 (개인정보 보호책임자)</span>
+        <span class="contact-value">이지호</span>
+      </div>
+      <div class="contact-row">
+        <span class="contact-label">이메일</span>
+        <span class="contact-value"><a href="mailto:admin@wfix.kr">admin@wfix.kr</a></span>
+      </div>
+      <div class="contact-row">
+        <span class="contact-label">서비스 도메인</span>
+        <span class="contact-value">wfix.kr 및 *.wfix.kr</span>
+      </div>
+    </div>
+    <p>② 정보주체는 wfix 서비스를 이용하면서 발생한 모든 개인정보보호 관련 문의, 불만처리, 피해구제 등에 관한 사항을 개인정보 보호책임자에게 문의할 수 있습니다. wfix는 정보주체의 문의에 대해 지체없이 답변 및 처리할 것입니다.</p>
+  </div>
+
+  <!-- 제10조 -->
+  <div class="article">
+    <div class="article-title"><span class="num">10</span>제10조 개인정보 열람 청구</div>
+    <p>정보주체는 「개인정보 보호법」 제35조에 따른 개인정보의 열람 청구를 아래의 연락처로 요청하실 수 있습니다.</p>
+    <div class="contact-card">
+      <div class="contact-row">
+        <span class="contact-label">이메일</span>
+        <span class="contact-value"><a href="mailto:admin@wfix.kr">admin@wfix.kr</a></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 제11조 -->
+  <div class="article">
+    <div class="article-title"><span class="num">11</span>제11조 개인정보 처리방침의 변경</div>
+    <p>① 이 개인정보 처리방침은 <strong>2026년 3월 29일</strong>부터 적용됩니다.</p>
+    <p>② 개인정보 처리방침의 내용이 변경되는 경우, 변경 사항은 wfix.kr을 통해 공지합니다.</p>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>최초 수립일: <strong>2026년 3월 29일</strong></p>
+    <p>운영자: <strong>이지호</strong> · <a href="mailto:admin@wfix.kr" style="color:#4f46e5;">admin@wfix.kr</a></p>
+    <p>서비스 도메인: <strong>wfix.kr</strong> 및 <strong>*.wfix.kr</strong></p>
+  </div>
+
+</div>
+</body>
+</html>
